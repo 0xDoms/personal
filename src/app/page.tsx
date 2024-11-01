@@ -1,4 +1,5 @@
 import DiscordProfile from "@/components/DiscordProfile";
+import Posts from "@/components/Posts";
 import { Badge } from "@/components/ui/badge"
 
 import { Github,MessageCircle,AtSign } from 'lucide-react';
@@ -44,40 +45,13 @@ export default async function Home() {
     </div>
     {/*Blogs*/}
     <div className="px-4 mt-3">
-      <h1 className="font-semibold">Blogs</h1>
+      <h1 className="font-semibold">Writings</h1>
       <div className="relative font-mono max-h-36 overflow-hidden">
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background pointer-events-none"></div>
 
         <div className="max-h-36 overflow-y-scroll">
-          <div className="flex justify-between">
-            <h1 className="font-medium">Title Blog</h1>
-            <p className="font-thin">20/12/24</p>
-          </div>
-          <div className="flex justify-between">
-            <h1 className="font-medium">Title Blog 100</h1>
-            <p className="font-thin">20/12/24</p>
-          </div>
-          <div className="flex justify-between">
-            <h1 className="font-medium">Title Blog 100</h1>
-            <p className="font-thin">20/12/24</p>
-          </div>
-          <div className="flex justify-between">
-            <h1 className="font-medium">Title Blog 100</h1>
-            <p className="font-thin">20/12/24</p>
-          </div>
-          <div className="flex justify-between">
-            <h1 className="font-medium">Title Blog 100</h1>
-            <p className="font-thin">20/12/24</p>
-          </div>
-          <div className="flex justify-between">
-            <h1 className="font-medium">Title Blog 100</h1>
-            <p className="font-thin">20/12/24</p>
-          </div>
-          <div className="flex justify-between">
-            <h1 className="font-medium">Title Blog 100</h1>
-            <p className="font-thin">20/12/24</p>
-          </div>
+          <Posts/>
         </div>
       </div>
     </div>
