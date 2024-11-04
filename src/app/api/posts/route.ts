@@ -7,7 +7,7 @@ function formatDate(date: Date): string {
   return new Intl.DateTimeFormat('en-GB').format(date); // Formats as dd/mm/yyyy
 }
 
-export async function GET(req: Request) {
+export async function GET() {
   const postsDirectory = path.join(process.cwd(), 'posts');
 
   try {
@@ -31,6 +31,7 @@ export async function GET(req: Request) {
           title,
           content: content.replace(/^#\s+.*\n/, ''), 
           date: formattedDate,
+          markup: '',
         };
       });
 

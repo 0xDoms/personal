@@ -36,11 +36,7 @@ export default async function Home() {
     <div className="px-4">
       <h1 className="font-semibold">About me</h1>
       <p className="text-muted-foreground">
-      Hello! I'm a passionate developer with experience in building full-stack applications, 
-      specializing in modern web technologies like React, Next.js, and Tailwind CSS. 
-      I enjoy solving complex problems, contributing to open-source projects, 
-      and learning about new advancements in software development. 
-      Feel free to explore my projects on GitHub or reach out on Discord for collaboration!
+      Hello! I&apos;m Dominic, a 19-year-old passionate software developer.<br/> I&apos;m mostly self-taught and love building full-stack applications and exploring new technologies like React, Next.js, and Tailwind CSS.<br/> I enjoy solving complex problems and expanding my skill set every day.<br/> Feel free to check out my projects on GitHub!<br/> Let&apos;s collaborate and build the next big thing together!
       </p>
     </div>
     {/*Blogs*/}

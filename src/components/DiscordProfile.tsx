@@ -4,8 +4,15 @@ import { useState, useEffect } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 
 
+interface DiscordUser {
+  global_name: string;
+  avatar: {
+    link: string;
+  };
+}
+
 export default function DiscordProfile() {
-  const [discord, setDiscord] = useState<any>(null);
+  const [discord, setDiscord] = useState<DiscordUser | null>(null);
 
   const fetchDiscord = async () => {
     try {

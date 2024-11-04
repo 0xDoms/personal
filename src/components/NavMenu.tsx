@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import {
 Menubar,
 MenubarContent,
@@ -12,12 +12,10 @@ MenubarTrigger,
 } from "@/components/ui/menubar"
 
 export default function NavMenu() {
-    const [theme, setTheme] = useState<"light" | "dark" | "system">("system");
 
     useEffect(() => {
         const savedTheme = localStorage.getItem("theme") as "light" | "dark" | "system";
         if (savedTheme) {
-            setTheme(savedTheme);
             applyTheme(savedTheme);
         } else {
             applyTheme("system");
@@ -37,7 +35,6 @@ export default function NavMenu() {
     };
 
     const handleThemeChange = (newTheme: "light" | "dark" | "system") => {
-        setTheme(newTheme);
         applyTheme(newTheme);
         localStorage.setItem("theme", newTheme);
     };

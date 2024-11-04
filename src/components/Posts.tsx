@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Post } from '@/types/posts';
+import Link from 'next/link';
 
 
 export default function Posts() {
@@ -37,7 +38,11 @@ export default function Posts() {
         ) : (
             posts.map((post) => (
                 <div key={post.title} className="flex justify-between">
-                    <h1 className="font-medium">{post.title}</h1>
+                    <Link href={`/posts/${post.title}`} passHref className="">
+                        <h1 className="font-medium cursor-pointer">
+                            {post.title}
+                        </h1>
+                    </Link>
                     <p className="font-thin">{post.date}</p>
                 </div>
             ))

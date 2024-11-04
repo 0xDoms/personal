@@ -1,7 +1,6 @@
 'use client';
 import { use,useEffect, useState } from 'react';
 import { Post } from '@/types/posts';
-import { useRouter } from 'next/router';
 
 
 type Params = {
@@ -14,7 +13,14 @@ const PostPage = ({ params }: { params: Promise<Params> }) => {
 
     useEffect(() => {
         const fetchPost = async () => {
-            const response = await fetch(`/api/posts/${unwrappedParams.post}`);
+            const response = await fetch('/api/posts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ post: unwrappedParams.post })
+            });
+    
             const data = await response.json();
             setPost(data.data);
         };
