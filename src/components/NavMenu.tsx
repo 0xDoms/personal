@@ -13,6 +13,7 @@ MenubarTrigger,
 
 export default function NavMenu() {
 
+
     useEffect(() => {
         const savedTheme = localStorage.getItem("theme") as "light" | "dark" | "system";
         if (savedTheme) {
@@ -39,12 +40,15 @@ export default function NavMenu() {
         localStorage.setItem("theme", newTheme);
     };
 
+
     return (
         <Menubar className="shadow-xl">
             <MenubarMenu>
                 <MenubarTrigger>Explore</MenubarTrigger>
                 <MenubarContent>
-                <MenubarItem>Home</MenubarItem>
+                <MenubarItem>
+                        <a href="/">Home</a> {/* Use an anchor tag for navigation */}
+                    </MenubarItem>
                 </MenubarContent>
             </MenubarMenu>
 

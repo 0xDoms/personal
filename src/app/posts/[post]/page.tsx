@@ -13,14 +13,15 @@ const PostPage = ({ params }: { params: Promise<Params> }) => {
 
     useEffect(() => {
         const fetchPost = async () => {
-            const response = await fetch('/api/posts', {
+            const decodedPost = decodeURIComponent(unwrappedParams.post);
+            const response = await fetch('/api/posts/post', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ post: unwrappedParams.post })
+                body: JSON.stringify({ post: decodedPost })
             });
-    
+            console.log(decodedPost);
             const data = await response.json();
             setPost(data.data);
         };
@@ -37,6 +38,7 @@ const PostPage = ({ params }: { params: Promise<Params> }) => {
 
     return (
         <div className='prose mt-12 font-sans'>
+            <h1>{post.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: post.markup }} />
         </div>
     );
