@@ -7,13 +7,7 @@ I’m going to use [Anders Brownworth's](https://andersbrownworth.com/blockchain
 ## Hashing
 
 **Hashing** is a critical part of the process, used to determine the legitimacy of transactions and to check whether a transaction has been tampered with. **Anders** has provided us with **SHA-256**, a hashing algorithm that produces a **256-bit hash** completely unique to its input data. No two hashes will be the same if the input data is different. SHA-256 is just one of many hashing algorithms; for example, **Ethereum** uses **Keccak-256**.
-
 ### Utility of Hashing
-
-Hashing acts as a signature for the data. When you input data into the hashing algorithm, it produces a unique hash that is linked solely to that data. If anything is changed, a completely new hash will be generated. This is similar to how [**PGP signatures**](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) work. For instance, when I input the word "blockchain," I receive the hash:
-However, if I change the input by capitalizing a letter, I get a completely different hash:
-This demonstrates that even minor changes in the data lead to a new hash.
-### ### Utility of Hashing
 
 Hashing acts as a signature for the data. When you input data into the hashing algorithm, it produces a unique hash that is linked solely to that data. If anything is changed, a completely new hash will be generated. This is similar to how [**PGP signatures**](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) work. For instance, when I input the word **"blockchain,"** I receive the hash:  
 **ef7797e13d3a75526946a3bcf00daec9fc9c9c4d51ddc7cc5df888f74dd434d1**  

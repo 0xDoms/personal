@@ -1,5 +1,6 @@
 'use client'
 import { useEffect } from "react";
+import Link from "next/link";
 import {
 Menubar,
 MenubarContent,
@@ -47,7 +48,7 @@ export default function NavMenu() {
                 <MenubarTrigger>Explore</MenubarTrigger>
                 <MenubarContent>
                 <MenubarItem>
-                        <a href="/">Home</a> {/* Use an anchor tag for navigation */}
+                    <Link href="/">Home</Link>
                     </MenubarItem>
                 </MenubarContent>
             </MenubarMenu>
